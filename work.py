@@ -506,9 +506,9 @@ def got_broadcast(broadcast):
     print('E[Q] = ',recover)
     
     
-    Q_recover=AEs_de_work(gk,recover)# <----Q還原(str形式)
+    Q_recover=AEs_de_work(gk,recover)
     Q_sp=Q_recover.split(',')
-    Q_tp=tuple(Q_sp) #<------Q轉回tuple形式
+    Q_tp=tuple(Q_sp) 
 
     print('Q_ecdsa check : ')
     ecdsa_verf(a,b,q,n,Generator_P_x,Generator_P_y,Q_tp[0],Q_tp[1],sign,Q_tp)
